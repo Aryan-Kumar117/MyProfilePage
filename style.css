@@ -1,0 +1,75 @@
+*{
+    font-family: monospace;
+    font-feature-settings:"calt";
+}
+
+#navbar {
+    background: #260656;
+    display: flex;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 10000;
+}
+
+#name {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+body{
+    background-image: url("https://i2.wp.com/xboxera.com/wp-content/uploads/2020/02/Ring.jpg");
+    background-size: cover;
+    color: antiquewhite;
+    font-size: 15px;
+}
+
+b{
+    color: hotpink;
+}
+
+h1{
+    color: hotpink;
+    font-size: 40px;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    float: left;
+    margin: 30px;
+}
+
+button{
+    color: rgb(223, 155, 155);
+    font-size: 1.3rem;
+    border-radius: 5px;
+    background: #260656;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: linear-gradient(to right, blue, red);
+    transform: scale(1.05);
+    transition: ease-in-out;
+}
