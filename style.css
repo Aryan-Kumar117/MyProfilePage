@@ -3,6 +3,15 @@
   font-feature-settings: "calt";
 }
 
+@font-face {
+  font-family: "halo";
+  src: url("Halo.ttf");
+}
+@font-face {
+  font-family: "halo-outline";
+  src: url("HaloOutline.ttf");
+}
+
 #navbar {
   background: linear-gradient(to right, rgba(6, 6, 58, 0.318), black);
   display: flex;
@@ -19,16 +28,18 @@
 }
 
 #name {
+  font-family: halo-outline;
+  color: #778450;
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
 @keyframes blink-animation {
-  50%{
+  50% {
     opacity: 0;
   }
 }
 @-webkit-keyframes blink-animation {
-  50%{
+  50% {
     opacity: 0;
   }
 }
@@ -88,7 +99,7 @@ button:hover {
   background-color: blueviolet;
 }
 
-table{
+table {
   color: white;
 }
 
@@ -96,6 +107,6 @@ hr.solid {
   border-top: 3px solid #260656;
 }
 
-h2{
-  color:hotpink;
+h2 {
+  color: rgb(185, 173, 0);
 }
