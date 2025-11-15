@@ -1,112 +1,168 @@
+/* Defining my color pallete! :-)*/
+:root {
+  --color-bg: #191716;
+  --color-nav: #191720;
+  --color-pri: #603A40;
+  --color-sec:#440D0F;
+  --color-acc:#AF9BB6;
+  --color-neu:#84596B;
+}
+
+.sofia-sans-condensed-normal{
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 * {
-  font-family: monospace;
+  font-family: "Sofia Sans Condensed", sans-serif;
   font-feature-settings: "calt";
-}
-
-@font-face {
-  font-family: "halo";
-  src: url("Halo.ttf");
-}
-@font-face {
-  font-family: "halo-outline";
-  src: url("HaloOutline.ttf");
-}
-
-#navbar {
-  background: linear-gradient(to right, rgba(6, 6, 58, 0.318), black);
-  display: flex;
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  right: 0;
-  top: 0px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  z-index: 10000;
-}
-
-#name {
-  font-family: halo-outline;
-  color: #778450;
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  50% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes blink-animation {
-  50% {
-    opacity: 0;
-  }
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
-  background-image: url("https://i2.wp.com/xboxera.com/wp-content/uploads/2020/02/Ring.jpg");
-  background-size: cover;
-  color: antiquewhite;
-  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-acc);
+  font-size: 1.5rem;
 }
 
-b {
-  color: hotpink;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-nav);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
-h1 {
-  color: hotpink;
-  font-size: 40px;
-}
-
-img {
-  height: 200px;
-  width: 200px;
-  border-radius: 200px;
-  float: left;
-  margin: 30px;
-}
-
-button {
-  color: rgb(223, 155, 155);
-  font-size: 1.3rem;
-  border-radius: 5px;
-  background: #260656;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding: 10px 10px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: linear-gradient(to right, rgb(7, 70, 13), rgb(42, 3, 3));
-  transform: scale(1.05);
-  transition: ease-in-out;
-}
-
-.rating {
-  color: red;
-  background-color: darkblue;
+.nav-left h1{
+  margin: 0;
   font-size: 2rem;
-  border-radius: 5px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding: 5px 5px;
-}
-.rating:hover {
-  transition: scale(1.05);
-  background-color: blueviolet;
+  font-weight: 600;
 }
 
-table {
-  color: white;
+.nav-right{
+  display: flex;
+  gap:1rem;
 }
 
-hr.solid {
-  border-top: 3px solid #260656;
+.nav-right a {
+  text-decoration: none;
+  color: var(--color-acc);
+  background-color: var(--color-nav);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-h2 {
-  color: rgb(185, 173, 0);
+.nav-right a:hover {
+  background-color: var(--color-sec);
+  transform: translateY(-2px);
+}
+
+main{
+  display: flexbox;
+  flex-direction: column;
+}
+
+#home{
+  position: relative;
+  overflow: hidden;
+  background-image: url(images/blur2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--color-sec);
+  height: 100vh;
+  transition: background-color 1s ease;
+}
+
+#name{
+  margin-top: 10rem;
+  font-size: 5rem;
+  font-weight: 900;
+}
+#info{
+  text-align: center;
+  margin-top: 10rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#home:has(#name:hover){
+  background-color:  #740404;
+}
+
+#skills a{
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  background-color: var(--color-sec);
+  border-radius: 0.5rem;
+  background: none;
+}
+
+#skills a:hover{
+  background-color: var(--color-acc);
+  color: var(--color-bg);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+
+#contact{
+  background-color: var(--color-nav);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+#contact a{
+  display: inline-flex;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  background-color: var(--color-bg);
+  color: var(--color-acc);
+  border-radius: 0.5rem;
+  background: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+#contact a:hover{
+  color: #440D0F;
+  transform: translateY(-2px);
+}
+
+#contact h1{
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  padding-top: 1rem;
+  color: var(--color-acc);
+}
+
+.copyright{
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-top: 1.5rem;
 }
